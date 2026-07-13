@@ -1,43 +1,65 @@
-# Takshil Pandya Portfolio
+# Takshil Pandya — Developer Portfolio
 
-A fresh Next.js App Router portfolio rebuilt from the Figma export as a visual reference, not copied generated code.
+My personal developer portfolio showcasing my projects, technical skills, and work as a full-stack developer.
 
-## Stack
+## Live Website
 
-- Next.js App Router
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- lucide-react
-- react-icons
-- react-github-calendar
+[takshil.in](https://takshil.in)
+
+## Tech Stack
+
+* **Framework:** Next.js App Router
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS
+* **Animations:** Framer Motion
+* **Icons:** Lucide React and React Icons
+* **GitHub Activity:** React GitHub Calendar
+* **Deployment:** Vercel
+
+## Running Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/TakshilCodes/portfolio.git
+cd portfolio
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open http://localhost:3000 in your browser.
+
+## Projects
+
+The portfolio includes selected projects demonstrating my experience with:
+
+* Full-stack web development
+* Authentication and account management
+* Databases and API development
+* AI integrations
+* Responsive product interfaces
+* Production deployment and optimization
 
 ## GitHub Contribution Graph
 
-The contribution graph uses `react-github-calendar` for `TakshilCodes`.
+The contribution graph is powered by `react-github-calendar` and displays public contribution activity from [TakshilCodes](https://github.com/TakshilCodes).
 
-No GitHub token is required. The package fetches public contribution data through the public `github-contributions-api` service used by the component.
+## Contact
 
-Setup steps:
+* **Portfolio:** [takshil.in](https://takshil.in)
+* **GitHub:** [github.com/TakshilCodes](https://github.com/TakshilCodes)
+* **Email:** [hello@takshil.in](mailto:hello@takshil.in)
 
-1. Install dependencies with `pnpm install`.
-2. Run locally with `pnpm run dev`.
-3. Open the local site and check the `Consistency` section.
-4. No `.env.local` entry is needed for the graph.
-5. No Vercel environment variable is needed for the graph.
+## License
 
-Notes:
-
-- The graph reflects what GitHub exposes on the public profile.
-- Public contributions work by default.
-- Private contribution counts only appear if GitHub profile settings allow them to appear publicly.
-- The backing public API caches results, so new commits may take a little while to show.
-
-## Development
-
-```bash
-pnpm install
-pnpm run dev
-pnpm run lint
-pnpm run build
-```
+This project is intended for personal portfolio use. The source code may be referenced for learning purposes, but the design, branding, and personal content should not be copied directly.

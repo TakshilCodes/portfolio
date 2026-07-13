@@ -147,7 +147,7 @@ export function ProjectCard({ project }: { project: Project }) {
         }}
         transition={{ duration: 0.22, ease: "easeOut" }}
       >
-        <div className="relative aspect-[1920/911] overflow-hidden bg-background">
+        <div className="relative aspect-1920/911 overflow-hidden bg-background">
           <AnimatePresence mode="wait">
             <motion.div
               key={`${project.slug}-${active}`}
@@ -322,7 +322,7 @@ export function ProjectCard({ project }: { project: Project }) {
               >
                 <X className="h-4 w-4" />
               </button>
-              <div className="relative aspect-[1920/911] max-h-[78vh] overflow-hidden rounded-xl border border-cream/10 bg-background">
+              <div className="relative aspect-1920/911 max-h-[78vh] overflow-hidden rounded-xl border border-cream/10 bg-background">
                 <Visual
                   visual={visual}
                   projectName={project.name}
