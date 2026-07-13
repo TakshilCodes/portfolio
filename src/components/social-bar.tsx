@@ -74,7 +74,7 @@ export function SocialBar() {
                 key={item.label}
                 href={item.href}
                 target={item.href.startsWith("http") ? "_blank" : undefined}
-                rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+                rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className={className}
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.98 }}

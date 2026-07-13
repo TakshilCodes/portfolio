@@ -49,7 +49,7 @@ export function GithubActivity() {
           <motion.a
             href={githubUrl}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="group inline-flex w-fit items-center gap-2 rounded-full border border-cream/10 bg-cream/4 px-3.5 py-2 text-sm font-medium text-muted transition-colors hover:border-cyan/25 hover:text-cream"
             whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.99 }}

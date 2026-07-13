@@ -280,7 +280,7 @@ export function ProjectCard({ project }: { project: Project }) {
                   key={button.label}
                   href={button.href}
                   target={button.href.startsWith("http") ? "_blank" : undefined}
-                  rel={button.href.startsWith("http") ? "noreferrer" : undefined}
+                  rel={button.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className={cn(
                     "inline-flex cursor-pointer items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold",
                     primary ? "text-background" : "border border-cream/10 bg-cream/4 text-cream",
