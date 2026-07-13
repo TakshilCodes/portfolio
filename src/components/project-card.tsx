@@ -147,7 +147,7 @@ export function ProjectCard({ project }: { project: Project }) {
         }}
         transition={{ duration: 0.22, ease: "easeOut" }}
       >
-        <div className="relative h-62.5 overflow-hidden bg-background md:h-66.25">
+        <div className="relative aspect-[1920/911] overflow-hidden bg-background">
           <AnimatePresence mode="wait">
             <motion.div
               key={`${project.slug}-${active}`}
@@ -178,7 +178,7 @@ export function ProjectCard({ project }: { project: Project }) {
               type="button"
               aria-label="Previous screenshot"
               onClick={previous}
-              className="absolute left-3 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-cream/15 bg-background/75 text-cream opacity-100 backdrop-blur transition-opacity md:opacity-0 md:group-hover:opacity-100"
+              className="absolute left-3 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-cream/15 bg-background/75 text-cream opacity-100 backdrop-blur transition-opacity md:opacity-0 md:group-hover:opacity-100"
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
@@ -188,7 +188,7 @@ export function ProjectCard({ project }: { project: Project }) {
               type="button"
               aria-label="Next screenshot"
               onClick={next}
-              className="absolute right-3 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-cream/15 bg-background/75 text-cream opacity-100 backdrop-blur transition-opacity md:opacity-0 md:group-hover:opacity-100"
+              className="absolute right-3 top-1/2 inline-flex h-9 w-9 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-cream/15 bg-background/75 text-cream opacity-100 backdrop-blur transition-opacity md:opacity-0 md:group-hover:opacity-100"
             >
               <ChevronRight className="h-4 w-4" />
             </button>
@@ -197,7 +197,7 @@ export function ProjectCard({ project }: { project: Project }) {
             type="button"
             aria-label="Open larger project preview"
             onClick={() => setLightboxOpen(true)}
-            className="absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-cream/15 bg-background/70 text-muted opacity-100 backdrop-blur transition-colors hover:text-cream md:opacity-0 md:group-hover:opacity-100"
+            className="absolute right-3 top-3 inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg border border-cream/15 bg-background/70 text-muted opacity-100 backdrop-blur transition-colors hover:text-cream md:opacity-0 md:group-hover:opacity-100"
           >
             <Maximize2 className="h-4 w-4" />
           </button>
@@ -213,7 +213,7 @@ export function ProjectCard({ project }: { project: Project }) {
                   type="button"
                   aria-label={`Show ${item.label}`}
                   onClick={() => setActive(index)}
-                  className="h-1.5 rounded-full transition-all"
+                  className="h-1.5 cursor-pointer rounded-full transition-all"
                   style={{
                     width: active === index ? 18 : 6,
                     backgroundColor: active === index ? tone.hex : "rgba(245,241,216,0.32)",
@@ -232,7 +232,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 type="button"
                 aria-label={`Preview ${item.label}`}
                 onClick={() => setActive(index)}
-                className="relative h-10 w-16 shrink-0 overflow-hidden rounded-md border bg-background transition-opacity"
+                className="relative h-10 w-16 shrink-0 cursor-pointer overflow-hidden rounded-md border bg-background transition-opacity"
                 style={{
                   borderColor: active === index ? tone.hex : "rgba(245,241,216,0.12)",
                   opacity: active === index ? 1 : 0.52,
@@ -282,7 +282,7 @@ export function ProjectCard({ project }: { project: Project }) {
                   target={button.href.startsWith("http") ? "_blank" : undefined}
                   rel={button.href.startsWith("http") ? "noreferrer" : undefined}
                   className={cn(
-                    "inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold",
+                    "inline-flex cursor-pointer items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold",
                     primary ? "text-background" : "border border-cream/10 bg-cream/4 text-cream",
                   )}
                   style={primary ? { backgroundColor: tone.hex } : undefined}
@@ -318,7 +318,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 type="button"
                 aria-label="Close preview"
                 onClick={() => setLightboxOpen(false)}
-                className="absolute -top-11 right-0 inline-flex h-9 w-9 items-center justify-center rounded-full border border-cream/15 bg-card text-cream"
+                className="absolute -top-11 right-0 inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-cream/15 bg-card text-cream"
               >
                 <X className="h-4 w-4" />
               </button>
@@ -339,7 +339,7 @@ export function ProjectCard({ project }: { project: Project }) {
                       type="button"
                       aria-label={`Show ${item.label}`}
                       onClick={() => setActive(index)}
-                      className="h-2 rounded-full"
+                      className="h-2 cursor-pointer rounded-full"
                       style={{
                         width: active === index ? 24 : 8,
                         backgroundColor: active === index ? tone.hex : "rgba(245,241,216,0.26)",

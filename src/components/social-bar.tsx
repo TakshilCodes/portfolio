@@ -1,10 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { FileText, Mail, MapPin } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 import { SiGithub, SiX } from "react-icons/si";
 
+import { ResumeComingSoonModal } from "@/components/ui/resume-coming-soon-modal";
 import { socials } from "@/data/socials";
 import { cn } from "@/lib/utils";
 
@@ -25,6 +27,8 @@ const colorMap = {
 };
 
 export function SocialBar() {
+  const [resumeModalOpen, setResumeModalOpen] = useState(false);
+
   return (
     <section className="px-5 pb-14 md:px-8 lg:px-10">
       <div className="surface flex flex-col gap-4 rounded-2xl p-4 sm:flex-row sm:items-center sm:justify-between">
@@ -32,19 +36,8 @@ export function SocialBar() {
           {socials.map((item) => {
             const Icon = iconMap[item.icon];
             const color = colorMap[item.accent];
-
-            return (
-              <motion.a
-                key={item.label}
-                href={item.href}
-                target={item.href.startsWith("http") ? "_blank" : undefined}
-                rel={item.href.startsWith("http") ? "noreferrer" : undefined}
-                className={cn(
-                  "group relative inline-flex items-center gap-2 rounded-xl border border-cream/10 bg-cream/4 px-3 py-2 text-sm text-muted transition-colors hover:text-cream",
-                )}
-                whileHover={{ scale: 1.01 }}
-                whileTap={{ scale: 0.98 }}
-              >
+            const content = (
+              <>
                 <span
                   className="inline-flex transition-transform duration-200 ease-out group-hover:-rotate-12 group-hover:scale-110"
                   style={{ color }}
@@ -55,6 +48,38 @@ export function SocialBar() {
                 <span className="pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 rounded-md border border-cream/10 bg-card px-2 py-1 font-mono text-xs text-cream opacity-0 shadow-xl transition-opacity group-hover:opacity-100">
                   {item.label}
                 </span>
+              </>
+            );
+            const className = cn(
+              "group relative inline-flex cursor-pointer items-center gap-2 rounded-xl border border-cream/10 bg-cream/4 px-3 py-2 text-sm text-muted transition-colors hover:text-cream",
+            );
+
+            if (item.icon === "resume") {
+              return (
+                <motion.button
+                  key={item.label}
+                  type="button"
+                  onClick={() => setResumeModalOpen(true)}
+                  className={className}
+                  whileHover={{ scale: 1.01 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  {content}
+                </motion.button>
+              );
+            }
+
+            return (
+              <motion.a
+                key={item.label}
+                href={item.href}
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+                className={className}
+                whileHover={{ scale: 1.01 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                {content}
               </motion.a>
             );
           })}
@@ -77,6 +102,11 @@ export function SocialBar() {
           </div>
         </div>
       </div>
+
+      <ResumeComingSoonModal
+        open={resumeModalOpen}
+        onClose={() => setResumeModalOpen(false)}
+      />
     </section>
   );
 }

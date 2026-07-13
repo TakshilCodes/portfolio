@@ -25,7 +25,7 @@ export const socials = [
   },
   {
     label: "Resume",
-    href: "/resume.pdf",
+    href: "#resume-coming-soon",
     icon: "resume",
     accent: "yellow",
   },
