@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Caveat, DM_Sans, DM_Serif_Display, JetBrains_Mono } from "next/font/google";
+import { MinimalGlowCursor } from "@/components/ui/minimal-glow-cursor";
 import "./globals.css";
 
 const siteUrl = "https://takshil.in";
@@ -123,6 +124,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
         />
+        <MinimalGlowCursor />
         {children}
       </body>
     </html>

@@ -91,6 +91,13 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  html.minimal-glow-cursor-enabled,
+  html.minimal-glow-cursor-enabled * {
+    cursor: none !important;
+  }
+}
+
 .page-frame {
   border: 1.5px solid rgba(231, 224, 194, 0.18);
   border-radius: 12px;

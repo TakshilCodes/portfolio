@@ -182,58 +182,5 @@ export const projects: Project[] = [
         variant: "secondary",
       },
     ],
-  },
-  {
-    name: "ShopKart",
-    slug: "shopkart",
-    description:
-      "E-commerce project with a storefront, shopping cart, admin dashboard, product management, and product editing flow.",
-    tech: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Prisma",
-      "PostgreSQL",
-    ],
-    accent: "red",
-    visuals: [
-      {
-        type: "image",
-        src: "/images/shopkart/shopkart-home.png",
-        label: "Storefront",
-      },
-      {
-        type: "image",
-        src: "/images/shopkart/shopkart-dashboard.png",
-        label: "Admin dashboard",
-      },
-      {
-        type: "image",
-        src: "/images/shopkart/shopkart-cart.png",
-        label: "Shopping cart",
-      },
-      {
-        type: "image",
-        src: "/images/shopkart/shopkart-admin-products.png",
-        label: "Product management",
-      },
-      {
-        type: "image",
-        src: "/images/shopkart/shopkart-admin-products-edit.png",
-        label: "Edit product",
-      },
-    ],
-    buttons: [
-      {
-        label: "Live Site",
-        href: "https://shopkartsite.vercel.app/",
-        variant: "primary",
-      },
-      {
-        label: "Source Code",
-        href: "https://github.com/TakshilCodes/shopkart-ecom",
-        variant: "secondary",
-      },
-    ],
-  },
+  }
 ];
