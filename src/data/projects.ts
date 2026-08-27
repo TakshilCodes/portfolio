@@ -119,7 +119,7 @@ export const projects: Project[] = [
         type: "image",
         src: "/images/ledgeros/insights.png",
         label: "Insights",
-      }
+      },
     ],
     buttons: [
       {
@@ -182,5 +182,5 @@ export const projects: Project[] = [
         variant: "secondary",
       },
     ],
-  }
+  },
 ];

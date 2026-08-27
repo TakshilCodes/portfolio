@@ -8,22 +8,16 @@ import { CobeGlobe } from "@/components/ui/cobe-globe";
 
 const workstreams = [
   {
-    id: "kartografer",
+    id: "aurbit",
     dot: "green",
     tag: "In Progress",
-    text: "Building Kartografer, an AI travel planner for real editable trips.",
-  },
-  {
-    id: "ai-costs",
-    dot: "cyan",
-    tag: "Research",
-    text: "Researching how to make AI generation affordable for thousands of users.",
+    text: "Building Aurbit, a production-grade feedback and issue management platform with embeddable widgets, multi-tenancy, and developer-focused infrastructure.",
   },
   {
     id: "townhawll",
-    dot: "purple",
+    dot: "cyan",
     tag: "Research",
-    text: "Researching TownHawll, a gaming, movies, and shows platform with community features, reviews, XP, leaderboards, and content discovery.",
+    text: "Researching and designing TownHawll, a social discovery platform for games, movies, and shows with communities, reviews, collections, and AI-powered features.",
   },
 ] as const;
 
